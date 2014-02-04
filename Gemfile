@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'instagram'
 gem 'oauth'
 gem 'foundation-rails'
+gem 'pry'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
