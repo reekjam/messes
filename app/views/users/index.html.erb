@@ -1,6 +1,10 @@
 <div class='container center'>
-  <ul class='small-block-grid-3'>
-    <% abbr_months.each do |month| %>
+  <ul class='small-block-grid-1'>
+    <li class='month-tile year-tile'>2014</li>
+  </ul>
+
+  <ul class='small-block-grid-1 medium-block-grid-4'>
+    <% Date::ABBR_MONTHNAMES.compact.each do |month| %>
     <li class='month-tile' ><%= month %></li>
     <% end %>
   </ul>

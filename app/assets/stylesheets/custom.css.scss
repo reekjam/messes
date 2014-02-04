@@ -1,17 +1,21 @@
 .center {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .container {
   position: relative;
-  width: 70%;
+  width: 90%;
 }
 
 .month-tile {
   background: #44accf;
   border: 10px solid #fff;
-  font-size: 8vw;
+  font-size: 10vw;
   color: #fff;
   text-align: center;
+}
+
+.year-tile {
+  font-size: 30vw;
 }
