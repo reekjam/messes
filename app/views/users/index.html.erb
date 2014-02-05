@@ -1,6 +1,11 @@
 <div class='container center'>
   <ul class='small-block-grid-1'>
-    <li class='month-tile year-tile'>2014</li>
+    <li class='month-tile year-tile'>
+      <%= link_to "Year", "#", html: {data-dropdown="drop"} %>
+      <ul id="drop" class="[tiny small medium large content]f-dropdown" data-dropdown-content>
+        <li>2014</li>
+      </ul>
+    </li>
   </ul>
 
   <ul class='small-block-grid-1 medium-block-grid-4'>
