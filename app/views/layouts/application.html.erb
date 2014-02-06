@@ -22,7 +22,26 @@
   </head>
 
   <body>
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1 class='white'>( MESSES )</h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+      </ul>
 
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <% unless @user.nil? %>
+          <li class="active"><%= link_to "#{@user.username}", "#" %><li>
+          <li class='divider'></li>
+          <li><%= link_to "Log Out", "#" %></li>
+          <% end %>
+        </ul>
+      </section>
+    </nav>
+    </div>
     <%= yield %>
 
 
