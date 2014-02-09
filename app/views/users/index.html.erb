@@ -1,18 +1,16 @@
 <div class='container center'>
   <div class='row'>
     <div class='small-12'>
-      <%= link_to "Month", "#", class: "button", data: { toggle: 'drop' } %>
-      <ul id="drop" class="[tiny content]f-dropdown" data-dropdown-content>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+      <%= link_to "Month", "#", class: "button", data: {dropdown: 'dropdown-months'} %>
+      <ul id="dropdown-months" class="f-dropdown" data-dropdown-content>
+        <li><a href="#">This is a link</a></li>
+        <li><a href="#">This is another</a></li>
+        <li><a href="#">Yet another</a></li>
       </ul>
-      <a href="#" class="button" data-dropdown="drop">Link Dropdown &raquo;</a>
-        <ul id="drop" class="[tiny small medium large content]f-dropdown" data-dropdown-content>
-          <li><a href="#">This is a link</a></li>
-          <li><a href="#">This is another</a></li>
-          <li><a href="#">Yet another</a></li>
-        </ul>
+      <%= link_to "Year", "#", class: "button", data: { dropdown: 'dropdown-years' } %>
+      <ul id="dropdown-years" data-dropdown-content class="f-dropdown content">
+        <li>(years)</li>
+      </div>
     </div>
   </div>
 </div>
