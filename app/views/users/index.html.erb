@@ -1,16 +1,20 @@
 <div class='container center'>
   <div class='row'>
-    <div class='small-12'>
-      <%= link_to "Month", "#", class: "button", data: {dropdown: 'dropdown-months'} %>
+    <div class='small-12 large-6 columns'>
+      <%= link_to "Month", "#", class: "button large", data: {dropdown: 'dropdown-months'} %>
       <ul id="dropdown-months" class="f-dropdown" data-dropdown-content>
-        <li><a href="#">This is a link</a></li>
-        <li><a href="#">This is another</a></li>
-        <li><a href="#">Yet another</a></li>
+        <% @months.each do |month| %>
+          <li><a href="#"><%= month %></a></li>
+        <% end %>
       </ul>
-      <%= link_to "Year", "#", class: "button", data: { dropdown: 'dropdown-years' } %>
+    </div>
+    <div class='small-12 large-6 columns'>
+      <%= link_to "Year", "#", class: "button large", data: { dropdown: 'dropdown-years' } %>
       <ul id="dropdown-years" data-dropdown-content class="f-dropdown content">
         <li>(years)</li>
-      </div>
     </div>
+  </div>
+  <div class='row'>
+    <%= render partial: 'photo', collection: @photos %>
   </div>
 </div>
