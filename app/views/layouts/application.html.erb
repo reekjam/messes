@@ -36,15 +36,18 @@
           <% unless @user.nil? %>
           <li class="active"><%= link_to "#{@user.username}", "#" %><li>
           <li class='divider'></li>
-          <li><%= link_to "Log Out", "#" %></li>
+          <li><%= link_to "Log Out", oauth_logout_path %></li>
           <% end %>
         </ul>
       </section>
     </nav>
     </div>
+    <div class='container center'>
+      <p><%= image_tag "vhohn_1_large.jpg" %></p>
     <%= yield %>
 
 
     <%= javascript_include_tag "application" %>
+    </div>
   </body>
 </html>

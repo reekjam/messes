@@ -1,5 +1,4 @@
 class OauthController < ApplicationController
-
   def connect
     redirect_to Instagram.authorize_url(:redirect_uri => CALLBACK_URL )
   end
@@ -10,4 +9,8 @@ class OauthController < ApplicationController
     redirect_to users_index_path
   end
 
+  def logout
+    reset_session
+    redirect_to users_home_path
+  end
 end

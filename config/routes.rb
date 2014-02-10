@@ -9,6 +9,7 @@ Messes::Application.routes.draw do
   get 'users/index' => 'users#index'
   get 'oauth/connect' => 'oauth#connect'
   get 'oauth/callback' => 'oauth#callback'
+  get 'oauth/logout' => 'oauth#logout'
 
 
   # Example of regular route:
