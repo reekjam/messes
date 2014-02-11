@@ -34,9 +34,9 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <% unless @user.nil? %>
-          <li class="active"><%= link_to "#{@user.username}", "#" %><li>
+          <li class="active"><%= link_to "Hi, #{@user.username}!", "#" %><li>
           <li class='divider'></li>
-          <li><%= link_to "Log Out", oauth_logout_path %></li>
+          <li><%= link_to "Sign Out", oauth_logout_path %></li>
           <% end %>
         </ul>
       </section>
