@@ -1,0 +1,7 @@
+  <div class='row'>
+    <% @sorted_photos.each do |photo| %>
+    <div class='small-4 large-2 columns'>
+      <div class='user-photo'><img src='<%= photo.images.thumbnail.url %>'></div>
+    </div>
+    <% end %>
+  </div>

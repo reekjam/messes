@@ -10,4 +10,20 @@ class UsersController < ApplicationController
     end
     @years = @years.uniq!
   end
+
+  def feed
+    client = Instagram.client(:access_token => session[:access_token])
+    @user = client.user
+    @photos = client.user_recent_media(count: -1)
+    @sorted_photos = []
+    @photos.each do |photo|
+      if params[:month] == get_month(photo.created_time)
+        @sorted_photos << photo
+      end
+    end
+  end
+
+  def get_month(timestamp)
+    Date::ABBR_MONTHNAMES[DateTime.strptime(timestamp, '%s').month]
+  end
 end

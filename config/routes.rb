@@ -7,6 +7,8 @@ Messes::Application.routes.draw do
 
   get 'users/home' => 'users#home'
   get 'users/index' => 'users#index'
+  get 'users/year_selector' => 'users#year_selector'
+  get 'users/feed' => 'users#feed'
   get 'oauth/connect' => 'oauth#connect'
   get 'oauth/callback' => 'oauth#callback'
   get 'oauth/logout' => 'oauth#logout'
