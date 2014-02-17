@@ -15,4 +15,8 @@ module UsersHelper
     end
     @years = @years.uniq!
   end
+
+  def get_year(timestamp)
+    DateTime.strptime(timestamp, '%s').year
+  end
 end
