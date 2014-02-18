@@ -9,7 +9,6 @@ class UsersController < ApplicationController
       @years << DateTime.strptime( photo[:created_time].to_s, '%s' ).year
     end
     @years = @years.uniq!
-    binding.pry
   end
 
   def feed
