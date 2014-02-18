@@ -9,13 +9,14 @@ class UsersController < ApplicationController
       @years << DateTime.strptime( photo[:created_time].to_s, '%s' ).year
     end
     @years = @years.uniq!
+    binding.pry
   end
 
   def feed
     client = Instagram.client(:access_token => session[:access_token])
     @user = client.user
     @photos = client.user_recent_media(count: -1)
-  
+
     @sorted_photos = []
     @photos.each do |photo|
       if params[:month] == get_month(photo.created_time)
