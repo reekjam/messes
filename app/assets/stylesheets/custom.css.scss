@@ -1,11 +1,9 @@
 .center {
-  margin-left: 5%;
-  margin-right: 5%;
+  text-align: center;
 }
 
 .container {
   position: relative;
-  width: 90%;
 }
 
 .month-tile {
@@ -18,4 +16,27 @@
 
 .year-tile {
   background: #ee3e64;
+}
+
+.white {
+  color: #fff;
+  font-family: 'Lobster';
+}
+
+.large {
+  width: 100%;
+}
+
+.user-photo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.buttons-nav {
+  padding-top: 25px;
+}
+
+.year-break {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 120px;
 }
