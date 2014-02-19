@@ -1,12 +1,24 @@
   <%= render 'month_selector' %>
   <div class='row'>
     <% @years.each do |year| %>
-      <div class='small-12 large-12 columns'><span class='year-break'><%= year %></span></div><hr></hr>
+      <div class='small-12 large-12 columns'><span class='year-break'><i class="fi-[heart]"></i><%= year %></span></div><hr></hr>
       <div class='row'>
         <% @sorted_photos.each do |photo| %>
         <div class='small-4 large-2 columns'>
           <% if get_year(photo.created_time) == year %>
-            <div class='user-photo th'><img src='<%= photo.images.thumbnail.url %>'></div>
+            <div class='user-photo th'>
+              <img src='<%= photo.images.thumbnail.url %>'>
+              <div class='row left'>
+                <div class='small-12 columns'>
+                <%= photo.likes[:count].blank? ? "0" : photo.likes[:count] %>
+                </div>
+              </div>
+              <div class='row right'>
+                <div class='small-12 columns'>
+                <%= Time.at(photo.created_time.to_i).strftime("%m/%d") %>
+                </div>
+              </div>
+            </div>
           <% end %>
         </div>
         <% end %>
