@@ -4,7 +4,7 @@
     <div class='small-12 large-12 columns'>
       <div class='row collapse'>
         <div class='small-10 large-10 columns'>
-          <%= select_tag :month, options_for_select((month_options), params[:month]) %>
+          <%= select_tag :month, options_for_select((month_options), params[:month]), prompt: 'Select a month' %>
         </div>
         <div class='small-2 large-2 columns'>
           <%= submit_tag 'GO', id: 'feed-submit', class: 'button postfix', remote: true %>
