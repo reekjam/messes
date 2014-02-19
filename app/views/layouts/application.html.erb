@@ -35,6 +35,8 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <% unless @user.nil? %>
+          <li><img src="<%= @user.profile_picture %>", style="height:41px; width:auto; padding-top:5px; padding-right:5px"></li>
+          <li class='divider'></li>
           <li class="active"><%= link_to "Hi, #{@user.username}!", "#" %><li>
           <li class='divider'></li>
           <li><%= link_to "Sign Out", oauth_logout_path %></li>
