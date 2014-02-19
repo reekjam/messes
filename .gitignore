@@ -12,4 +12,4 @@
 /log/*.log
 /tmp
 /config/database.yml
-/config/initializers/instagram.rb
+/config/initializers/dev_environment.rb
