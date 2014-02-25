@@ -19,4 +19,12 @@ module UsersHelper
   def get_year(timestamp)
     DateTime.strptime(timestamp, '%s').year
   end
+
+  def get_likes(photo)
+    photo.likes[:count].blank? ? "0" : photo
+  end
+
+  def get_date(photo)
+    Time.at(photo.created_time.to_i).strftime("%m/%d")
+  end
 end
