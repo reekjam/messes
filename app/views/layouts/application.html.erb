@@ -14,10 +14,12 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  	<title><%= content_for?(:title) ? yield(:title) : "Catstronaut" %></title>
 
-  	<%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+    <script src="/js/vendor/modernizr.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   </head>
@@ -47,11 +49,12 @@
     </nav>
     </div>
     <div class='container center'>
+      <script src="/js/vendor/jquery.js"></script>
+      <script src="/js/vendor/fastclick.js"></script> 
       <p><%= image_tag "space_cat.jpg" %></p>
 
     <%= yield %>
 
-    <%= javascript_include_tag "application" %>
     </div>
   </body>
 </html>
