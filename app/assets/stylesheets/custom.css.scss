@@ -4,6 +4,7 @@
 
 .container {
   position: relative;
+  background: #000;
 }
 
 .month-tile {
@@ -37,6 +38,8 @@
 }
 
 .year-break {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Raleway Dots', cursive;
+  letter-spacing: .6em;
   font-size: 120px;
+  color: #fff;
 }
