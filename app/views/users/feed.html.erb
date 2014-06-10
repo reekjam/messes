@@ -7,21 +7,10 @@
     <div class='year-media'>
     <% @sorted_photos.each do |photo| %>
       <div class='user-photos'>
-        <div class='small-4 large-2 columns'>
+        <div class='small-4 large-3 columns'>
           <% if get_year(photo.created_time) == year %>
             <div class='user-photo th'>
               <img src='<%= photo.images.thumbnail.url %>'>
-              <div class='row left'>
-                <div class='small-12 columns'>
-                <i class="fi-[heart]"></i>
-                <%= photo.likes[:count].blank? ? "0" : photo.likes[:count] %>
-                </div>
-              </div>
-              <div class='row right'>
-                <div class='small-12 columns'>
-                <%= Time.at(photo.created_time.to_i).strftime("%m/%d") %>
-                </div>
-              </div>
             </div>
           <% end %>
         </div>
