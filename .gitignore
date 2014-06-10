@@ -14,3 +14,4 @@
 /config/database.yml
 /config/initializers/dev_environment.rb
 /.env
+/public/assets
