@@ -1,13 +1,9 @@
 <div class='row'>
   <div class='buttons-nav'>
     <%= form_tag users_feed_path, method: 'get', id: 'test-form' do %>
-    <div class='small-12 large-12 columns'>
-      <div class='row collapse'>
-        <div class='small-12 large-12 columns'>
-          <%= select_tag :month, options_for_select((month_options), params[:month]), onchange: "$('#test-form').submit()" %>
-        </div>
-    <% end %>
+      <div class='small-12 large-12 columns'>
+        <%= select_tag :month, options_for_select((month_options), params[:month]), onchange: "$('#test-form').submit()", prompt: 'choose a meow-nth' %>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
