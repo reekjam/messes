@@ -13,12 +13,10 @@
               <img src='<%= photo.images.thumbnail.url %>'>
               <div class='row left'>
                 <div class='small-12 columns'>
-                <%= photo.likes[:count].blank? ? "0" : photo.likes[:count] %>
-                </div>
-              </div>
-              <div class='row right'>
-                <div class='small-12 columns'>
-                <%= Time.at(photo.created_time.to_i).strftime("%m/%d") %>
+                  <div class='likes'>
+                    <i class='fi-heart large'></i>
+                    <%= photo.likes[:count].blank? ? "0" : photo.likes[:count] %>
+                  </div>
                 </div>
               </div>
             </div>
