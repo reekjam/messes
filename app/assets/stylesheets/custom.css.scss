@@ -4,6 +4,7 @@
 
 .container {
   position: relative;
+  background: #000;
 }
 
 .month-tile {
@@ -28,8 +29,8 @@
 }
 
 .profile-picture {
-  height:41px; 
-  width:auto; 
+  height:41px;
+  width:auto;
   padding-top:5px;
   padding-left:5px;
   padding-right:5px;
@@ -45,6 +46,8 @@
 }
 
 .year-break {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Raleway Dots', cursive;
+  letter-spacing: .2em;
   font-size: 120px;
+  color: #fff;
 }

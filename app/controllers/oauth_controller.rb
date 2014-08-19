@@ -1,6 +1,6 @@
 class OauthController < ApplicationController
   def connect
-    if Rails.env == 'development'
+    if Rails.env.development?
       redirect_to Instagram.authorize_url(:redirect_uri => 'http://localhost:3000/oauth/callback')
     else 
       redirect_to Instagram.authorize_url(:redirect_uri => ENV['CALLBACK_URL'])
@@ -8,7 +8,7 @@ class OauthController < ApplicationController
   end
 
   def callback
-    if Rails.env == 'development'
+    if Rails.env.development?
       response = Instagram.get_access_token(params[:code], :redirect_uri => 'http://localhost:3000/oauth/callback')
     else
       response = Instagram.get_access_token(params[:code], :redirect_uri => ENV['CALLBACK_URL'])
