@@ -1,4 +1,20 @@
 .likes {
-  color: #ff0000;
-  opacity: 0.5;
+  color: #ffffff;
+  i {
+    color: #ff0000;
+  }
+}
+
+.user-photo {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding-top: 1em;
+}
+
+.year-break {
+  font-family: 'Raleway Dots', cursive;
+  letter-spacing: .2em;
+  font-size: 120px;
+  color: #fff;
+  padding-bottom: .25em;
 }

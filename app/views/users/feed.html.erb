@@ -11,14 +11,10 @@
           <% if get_year(photo.created_time) == year %>
             <div class='user-photo th'>
               <img src='<%= photo.images.thumbnail.url %>'>
-              <div class='row left'>
-                <div class='small-12 columns'>
-                  <div class='likes'>
-                    <i class='fi-heart large'></i>
-                    <%= photo.likes[:count].blank? ? "0" : photo.likes[:count] %>
-                  </div>
+                <div class='likes'>
+                  <i class='fi-heart large'></i>
+                  <%= photo.likes[:count].blank? ? "0" : photo.likes[:count] %>
                 </div>
-              </div>
             </div>
           <% end %>
         </div>
