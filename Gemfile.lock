@@ -43,6 +43,7 @@ GEM
       multipart-post (~> 1.2.0)
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
+    fastclick-rails (1.0.1)
     foundation-rails (5.1.1.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
@@ -139,6 +140,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   dotenv
+  fastclick-rails (~> 1.0.1)
   foundation-rails
   instagram
   jbuilder (~> 1.2)
