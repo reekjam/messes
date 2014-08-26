@@ -8,7 +8,7 @@
       <ul class='user-photos'>
         <% @sorted_photos.each do |photo| %>
           <% if get_year(photo.created_time) == year %>
-            <li class='small-4 large-3 columns'>
+            <li class='small-4 large-3 columns end'>
               <div class='user-photo th'>
               <%= link_to((image_tag photo.images.thumbnail.url), photo.images.standard_resolution.url) %>
                 <div class='likes'>
