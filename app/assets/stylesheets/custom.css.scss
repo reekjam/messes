@@ -47,8 +47,8 @@ ul {
 #overlay {
   display: none;
   position: absolute;
-  background: #fff;
-  opacity: .5;
+  background: #000;
+  opacity: .8;
   left: 0%;
   top: 0%;
   width: 100%;
@@ -56,14 +56,21 @@ ul {
   z-index: 1000;
 }
 
-.modal {
+#modal {
   display: none;
-  position: absolute;
-  background: #000;
-  border: solid #fff 1px;
-  top: 25%;
-  left: 25%;
-  width: 660px;
-  height: 660px;
+  position: fixed;
+  background: #fff;
+  border-radius: 5px;
+  top: 2%;
+  left: 2%;
+  width: 672px;
+  height: 672px;
   z-index: 2000;
+}
+
+#modal-photo {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  z-index: 3000;
 }
