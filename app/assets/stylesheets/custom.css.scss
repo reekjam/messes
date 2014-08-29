@@ -84,5 +84,8 @@ ul {
   i {
     color: #fff;
     font-size: 4em;
+    &:hover {
+      opacity: .8;
+    }
   }
 }
