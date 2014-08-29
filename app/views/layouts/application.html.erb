@@ -25,32 +25,33 @@
   </head>
 
   <body>
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1 class='white'>Catstronaut</h1>
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-      </ul>
-
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <% unless @user.nil? %>
-          <li class='divider'></li>
-          <li><img class='profile-picture' src="<%= @user.profile_picture %>"></li>
-          <li class='divider'></li>
-          <li class="active"><%= link_to "Hi, #{@user.username}!", "#" %><li>
-          <li class='divider'></li>
-          <li><%= link_to "Sign Out", oauth_logout_path %></li>
-          <% end %>
+    <div class='fixed'>
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1 class='white'>Catstronaut</h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
         </ul>
-      </section>
-    </nav>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <% unless @user.nil? %>
+            <li class='divider'></li>
+            <li><img class='profile-picture' src="<%= @user.profile_picture %>"></li>
+            <li class='divider'></li>
+            <li class="active"><%= link_to "Hi, #{@user.username}!", "#" %><li>
+            <li class='divider'></li>
+            <li><%= link_to "Sign Out", oauth_logout_path %></li>
+            <% end %>
+          </ul>
+        </section>
+      </nav>
     </div>
+    <%= image_tag "space_cat.jpg", id: 'background-img' %>
     <div class='container center'>
 
-      <p><%= image_tag "space_cat.jpg" %></p>
 
     <%= yield %>
 

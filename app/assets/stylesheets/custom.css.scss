@@ -5,18 +5,12 @@
 .container {
   position: relative;
   background: #000;
+  top: 640px;
 }
 
-.month-tile {
-  background: #44accf;
-  border: 10px solid #fff;
-  font-size: 10vw;
-  color: #fff;
-  text-align: center;
-}
-
-.year-tile {
-  background: #ee3e64;
+#background-img {
+  position: fixed;
+  margin: auto;
 }
 
 .white {
