@@ -12,6 +12,7 @@
             <li class='small-2 large-2 columns end'>
               <div class='user-photo th' data-photo-url=<%= photo.images.standard_resolution.url %>>
               <%= image_tag photo.images.standard_resolution.url, size: '150x150' %>
+                <div class='caption'><%= photo.caption.text %></div>
                 <div class='likes'>
                   <i class='fi-heart large'></i>
                   <%= photo.likes[:count].blank? ? "0" : photo.likes[:count] %>
@@ -24,8 +25,11 @@
     </div>
   </div>
   <% end %>
-  <div id='modal'>
-    <div id='modal-photo'></div>
+  <div id='modal-container'>
+    <div id='modal'>
+      <div id='modal-photo'></div>
+    </div>
+    <div id='modal-caption'></div>
   </div>
   <div id='overlay'></div>
   <div id='close-btn'>

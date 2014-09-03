@@ -49,7 +49,9 @@ ul {
   height: 100%;
   z-index: 1000;
 }
-
+#modal-container {
+  width: auto;
+}
 #modal {
   display: none;
   position: fixed;
@@ -61,14 +63,21 @@ ul {
   height: 672px;
   z-index: 2000;
 }
-
 #modal-photo {
   position: absolute;
   left: 30px;
   top: 20px;
   z-index: 3000;
 }
-
+#modal-caption {
+  display: none;
+  position: fixed;
+  right: 2%;
+  top: 15%;
+  width: 400px;
+  color: #fff;
+  z-index: 3000;
+}
 #close-btn {
   display: none;
   position: fixed;
