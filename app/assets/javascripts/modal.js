@@ -13,3 +13,11 @@ $(document).on('click', '#close-btn', function(){
   $('#overlay').fadeOut('fast');
   $('#modal').fadeOut('fast');
 })
+$(document).ready(function(){
+  auto_height = $(window).height() - $('.top-bar').height()
+  $('#user-feed').css('min-height', auto_height)
+})
+$(window).resize(function(){
+  auto_height = $(window).height() - $('.top-bar').height()
+  $('#user-feed').css('min-height', auto_height)
+})
