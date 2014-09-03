@@ -37,7 +37,9 @@
 ul {
   list-style-type: none;
 }
-
+.blurry {
+  -webkit-filter: blur(20px);
+}
 #overlay {
   display: none;
   position: fixed;

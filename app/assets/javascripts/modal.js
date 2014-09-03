@@ -10,6 +10,8 @@ $(document).ready(function(){
     caption = $(this).children('.caption').text()
     document.getElementById('modal-caption').innerHTML = caption
     $('#modal-caption').fadeIn('fast')
+    $('#user-feed').addClass('blurry')
+    $('#background-img').addClass('blurry')
   })
 })
 $(document).on('click', '#close-btn', function(){
@@ -17,6 +19,8 @@ $(document).on('click', '#close-btn', function(){
   $('#overlay').fadeOut('fast');
   $('#modal').fadeOut('fast');
   $('#modal-caption').fadeOut('fast');
+  $('#user-feed').removeClass('blurry');
+  $('#background-img').removeClass('blurry');
 })
 $(document).ready(function(){
   auto_height = $(window).height() - $('.top-bar').height()
