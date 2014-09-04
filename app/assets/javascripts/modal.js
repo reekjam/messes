@@ -1,9 +1,6 @@
 $(document).ready(function(){
   var photo_url
   var caption
-  var background_img_margin = $('#background-img').height();
-  console.log(background_img_margin)
-  $('.container').css('top', background_img_margin)
   $('.user-photo.th').click(function(){
     $('#overlay, #modal, #modal-caption, #close-btn').fadeIn('fast');
     photo_url = $(this).data('photo-url')
@@ -18,8 +15,12 @@ $(document).on('click', '#close-btn', function(){
   $('#user-feed, #background-img').removeClass('blurry');
 })
 $(document).ready(function(){
-  auto_height = $(window).height() - $('.top-bar').height()
-  $('#user-feed').css('min-height', auto_height)
+  user_feed_height = $(window).height() - $('.top-bar').height()
+  $('#user-feed').css('min-height', user_feed_height)
+  console.log('auto_height:' + user_feed_height)
+  container_top_margin = $('#background-img').height()
+  $('.container').css('top', container_top_margin)
+  console.log('container_top_margin:' + container_top_margin)
 })
 $(window).resize(function(){
   background_img_margin = $('#background-img').height()
