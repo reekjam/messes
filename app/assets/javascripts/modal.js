@@ -1,6 +1,9 @@
 $(document).ready(function(){
   var photo_url
   var caption
+  var background_img_margin = $('#background-img').height();
+  console.log(background_img_margin)
+  $('.container').css('top', background_img_margin)
   $('.user-photo.th').click(function(){
     $('#overlay, #modal, #modal-caption, #close-btn').fadeIn('fast');
     photo_url = $(this).data('photo-url')
@@ -19,6 +22,8 @@ $(document).ready(function(){
   $('#user-feed').css('min-height', auto_height)
 })
 $(window).resize(function(){
+  background_img_margin = $('#background-img').height()
   auto_height = $(window).height() - $('.top-bar').height()
   $('#user-feed').css('min-height', auto_height)
+  $('.container').css('top', background_img_margin)
 })
