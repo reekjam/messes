@@ -11,7 +11,7 @@ $(document).ready(function(){
   })
 })
 $(document).on('click', '#close-btn', function(){
-  $('this, #overlay, #modal, #modal-caption').fadeOut('fast');
+  $('#close-btn, #overlay, #modal, #modal-caption').fadeOut('fast');
   $('#user-feed, #background-img').removeClass('blurry');
 })
 $(document).ready(function(){

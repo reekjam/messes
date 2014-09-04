@@ -1,1 +1,0 @@
-('#feed-submit').after("<%= j render('sorted_photos') %>");
