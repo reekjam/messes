@@ -28,6 +28,11 @@ class UsersController < ApplicationController
       @years << DateTime.strptime( sorted_photo[:created_time].to_s, '%s' ).year
     end
     @years.uniq!
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def get_month(timestamp)
