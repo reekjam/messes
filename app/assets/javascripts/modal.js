@@ -11,7 +11,11 @@ $(document).on('click', '.user-photo.th', function(){
   $('#overlay, #modal, #modal-caption, #close-btn').fadeIn('fast');
   photo_url = $(this).data('photo-url')
   caption = $(this).children('.caption').text()
-  document.getElementById('modal-photo').innerHTML = "<img src=" + photo_url + " height='612' width='612'>"
+  modal_size = $(window).width() * .42
+  photo_size = $(window).width() * .40
+  document.getElementById('modal').style.width = modal_size+'px'
+  document.getElementById('modal').style.height = modal_size+'px'
+  document.getElementById('modal-photo').innerHTML = "<img src=" + photo_url + " height=" + photo_size + " width=" + photo_size + ">"
   document.getElementById('modal-caption').innerHTML = caption
   $('#user-feed, #background-img').addClass('blurry')
 })
