@@ -63,9 +63,8 @@ ul {
   z-index: 2000;
 }
 #modal-photo {
-  position: absolute;
-  left: 30px;
-  top: 20px;
+  position: relative;
+  margin: 2% auto;
   z-index: 3000;
 }
 #modal-caption {
