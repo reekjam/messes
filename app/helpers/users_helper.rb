@@ -1,6 +1,6 @@
 module UsersHelper
   def month_options
-    @months = Date::ABBR_MONTHNAMES
+    @months = Date::MONTHNAMES
     @months.each do |month|
       unless month.nil?
         month
