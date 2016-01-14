@@ -29,5 +29,4 @@ function set_margin(){
   var user_feed_height = $(window).height() - $('.top-bar').height()
   $('.container').css('top', container_top_margin)
   $('#user-feed').css('min-height', user_feed_height)
-  console.log(container_top_margin)
 }
